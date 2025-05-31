@@ -62,6 +62,7 @@ app.use((error, req, res, next) => {
 
 // Read MongoDB connection URI from environment variables (stored in .env)
 const MONGO_URI = process.env.MONGODB_URI;
+const PORT = process.env.PORT;
 
 // Connect to MongoDB database using Mongoose
 mongoose.connect(MONGO_URI)
@@ -69,7 +70,7 @@ mongoose.connect(MONGO_URI)
     console.log("MongoDB connected"); // Log success message when DB connection established
 
     // Start Express server listening on port 1000 after DB connection succeeds
-    app.listen(1000, () => {
+    app.listen(PORT, () => {
       console.log('MONGO_URI:', process.env.MONGODB_URI); // Log connection string (for debugging)
       console.log(`Server is running on http://localhost:1000`); // Inform server is ready
     });
