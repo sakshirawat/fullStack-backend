@@ -14,7 +14,7 @@ const app = express(); // Initialize Express app
 
 // CORS configuration options to allow frontend (localhost:3000) to access backend APIs
 const corsOptions = {
-  origin: 'http://localhost:3000',           // Allow only this origin (React frontend running locally)
+  origin: 'https://appointmenthealthcare.netlify.app/',           // Allow only this origin (React frontend running locally)
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allowed HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'],   // Allowed headers in requests
   credentials: true,                         // Allow sending cookies and authentication info
